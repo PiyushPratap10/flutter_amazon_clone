@@ -24,27 +24,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       onGenerateRoute: (setting) => generateRoute(setting),
-      home: Scaffold(
-          appBar: AppBar(
-            title: const Text('Hello'),
-          ),
-          body: Container(
-            alignment: Alignment.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text('Welcome Yo!'),
-                Builder(builder: (context) {
-                  return ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, AuthScreen.routeName);
-                    },
-                    child: const Text('Click'),
-                  );
-                })
-              ],
-            ),
-          )),
+      home: const AuthScreen()
     );
   }
 }
